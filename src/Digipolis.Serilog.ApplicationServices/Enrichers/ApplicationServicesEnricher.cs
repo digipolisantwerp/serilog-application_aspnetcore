@@ -6,9 +6,9 @@ using Serilog.Events;
 
 namespace Digipolis.Serilog
 {
-    public class ApplicationContextEnricher : ILogEventEnricher
+    public class ApplicationServicesEnricher : ILogEventEnricher
     {
-        public ApplicationContextEnricher(IApplicationContext applicationContext)
+        public ApplicationServicesEnricher(IApplicationContext applicationContext)
         {
             _applicationContext = applicationContext;
         }

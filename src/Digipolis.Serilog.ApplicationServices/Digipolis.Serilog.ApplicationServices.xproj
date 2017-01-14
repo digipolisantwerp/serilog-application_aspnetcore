@@ -6,14 +6,11 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>E5704AC8-110F-8305-AED7-0E6D30F0AB18</ProjectGuid>
-    <RootNamespace>Digipolis.Serilog.ApplicationEnrichment.UnitTests</RootNamespace>
+    <ProjectGuid>2D3FDD2D-63C8-CCC9-0FD1-2A253E404B18</ProjectGuid>
+    <RootNamespace>Digipolis.Serilog.ApplicationServices</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <AssemblyName>Digipolis.Serilog.ApplicationEnrichment.UnitTests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>

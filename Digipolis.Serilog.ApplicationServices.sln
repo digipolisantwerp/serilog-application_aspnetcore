@@ -18,9 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C5B6D1F6-B21
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B3993F82-0745-0F1F-FB52-6D649E1CB620}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.Serilog.ApplicationEnrichment", "src\Digipolis.Serilog.ApplicationEnrichment\Digipolis.Serilog.ApplicationEnrichment.xproj", "{2D3FDD2D-63C8-CCC9-0FD1-2A253E404B18}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.Serilog.ApplicationServices", "src\Digipolis.Serilog.ApplicationServices\Digipolis.Serilog.ApplicationServices.xproj", "{2D3FDD2D-63C8-CCC9-0FD1-2A253E404B18}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.Serilog.ApplicationEnrichment.UnitTests", "test\Digipolis.Serilog.ApplicationEnrichment.UnitTests\Digipolis.Serilog.ApplicationEnrichment.UnitTests.xproj", "{E5704AC8-110F-8305-AED7-0E6D30F0AB18}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Digipolis.Serilog.ApplicationServices.UnitTests", "test\Digipolis.Serilog.ApplicationServices.UnitTests\Digipolis.Serilog.ApplicationServices.UnitTests.xproj", "{E5704AC8-110F-8305-AED7-0E6D30F0AB18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

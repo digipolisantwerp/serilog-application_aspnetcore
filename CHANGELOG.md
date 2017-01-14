@@ -1,4 +1,4 @@
-# Serilog.ApplicationEnrichment Toolbox
+# Serilog ApplicationServices Toolbox
 
 ## 1.0.0
 

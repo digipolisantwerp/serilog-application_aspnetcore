@@ -13,7 +13,7 @@
     },
 	"testRunner": "xunit",
     "dependencies": {
-        "Digipolis.Serilog.ApplicationEnrichment": "*",
+        "Digipolis.Serilog.ApplicationServices": "*",
         "NETStandard.Library": "1.6.0",
         "Moq": "4.6.38-alpha",
         "xunit": "2.2.0-beta2-build3300",
