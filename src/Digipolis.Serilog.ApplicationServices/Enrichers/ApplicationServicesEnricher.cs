@@ -20,6 +20,8 @@ namespace Digipolis.Serilog
         private LogEventProperty _applicationInstanceId;
         private LogEventProperty _applicationInstanceName;
         private LogEventProperty _applicationVersion;
+        private LogEventProperty _machineName;
+
 
         private const string COMPONENTKEY = "SourceContext";
 
@@ -32,6 +34,7 @@ namespace Digipolis.Serilog
             logEvent.AddPropertyIfAbsent(_applicationInstanceId);
             logEvent.AddPropertyIfAbsent(_applicationInstanceName);
             logEvent.AddPropertyIfAbsent(_applicationVersion);
+            logEvent.AddPropertyIfAbsent(_machineName);
 
             if ( logEvent.Properties.ContainsKey(COMPONENTKEY) )
             {
@@ -41,6 +44,9 @@ namespace Digipolis.Serilog
                 logEvent.AddOrUpdateProperty(idProp);
                 logEvent.AddOrUpdateProperty(nameProp);
             }
+
+            logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty(ApplicationLoggingProperties.ProcessId, System.Diagnostics.Process.GetCurrentProcess().Id));
+            logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty(ApplicationLoggingProperties.ThreadId, new ScalarValue(System.Environment.CurrentManagedThreadId)));
 
             // ToDo (SVB) : only when configured
             //logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty("LoggingProperties.ApplicationStackTrace", Environment.StackTrace));
@@ -53,6 +59,8 @@ namespace Digipolis.Serilog
             _applicationInstanceId = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationInstanceId, _applicationContext.InstanceId ?? ApplicationLoggingProperties.NullValue);
             _applicationInstanceName = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationInstanceName, _applicationContext.InstanceName ?? ApplicationLoggingProperties.NullValue);
             _applicationVersion = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationVersion, _applicationContext.ApplicationVersion ?? ApplicationLoggingProperties.NullValue);
+            _machineName = propertyFactory.CreateProperty(ApplicationLoggingProperties.MachineName, System.Environment.MachineName ?? ApplicationLoggingProperties.NullValue);
+            //_userName = propertyFactory.CreateProperty(ApplicationLoggingProperties.EnvironmentUserName, Environment.GetEnvironmentVariable("USERNAME"));
         }
     }
 }

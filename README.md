@@ -63,3 +63,6 @@ The enricher adds the following fields to the Serilog LogEvent :
 - ApplicationVersion : the application's version.
 - ComponentId : id of the component (.NET class) that logs the event.
 - ComponentName : name of the component (.NET class) that logs the event.
+- MachineName : name of the machine the process runs on.
+- ProcessId : the process id of the application.
+- ThreadId : the executing thread.

@@ -13,6 +13,12 @@ namespace Digipolis.Serilog.ApplicationEnrichment
         public const string ApplicationVersion = "ApplicationVersion";
         public const string ApplicationStackTrace = "ApplicationStacktrace";
 
+        public const string ThreadId = "ApplicationThreadId";
+        public const string ProcessId = "ApplicationProcessId";
+
+        public const string MachineName = "EnvironmentMachineName";
+        public const string EnvironmentUserName = "EnvironmentUserName";
+
         public const string NullValue = "null";
     }
 }
