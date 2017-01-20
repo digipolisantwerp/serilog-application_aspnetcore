@@ -47,9 +47,6 @@ namespace Digipolis.Serilog
 
             logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty(ApplicationLoggingProperties.ProcessId, System.Diagnostics.Process.GetCurrentProcess().Id));
             logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty(ApplicationLoggingProperties.ThreadId, new ScalarValue(System.Environment.CurrentManagedThreadId)));
-
-            // ToDo (SVB) : only when configured
-            //logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty("LoggingProperties.ApplicationStackTrace", Environment.StackTrace));
         }
 
         private void InitProperties(ILogEventPropertyFactory propertyFactory)
@@ -60,7 +57,6 @@ namespace Digipolis.Serilog
             _applicationInstanceName = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationInstanceName, _applicationContext.InstanceName ?? ApplicationLoggingProperties.NullValue);
             _applicationVersion = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationVersion, _applicationContext.ApplicationVersion ?? ApplicationLoggingProperties.NullValue);
             _machineName = propertyFactory.CreateProperty(ApplicationLoggingProperties.MachineName, System.Environment.MachineName ?? ApplicationLoggingProperties.NullValue);
-            //_userName = propertyFactory.CreateProperty(ApplicationLoggingProperties.EnvironmentUserName, Environment.GetEnvironmentVariable("USERNAME"));
         }
     }
 }
