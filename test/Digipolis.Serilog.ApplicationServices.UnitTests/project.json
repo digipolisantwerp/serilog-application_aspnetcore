@@ -3,7 +3,7 @@
 	"description": "Serilog.ApplicationEnrichment Toolbox unit tests.",
 	"authors": [ "digipolis.be" ],
 	"packOptions": {
-        "tags": [ "Toolbox", "Serilog.ApplicationEnrichment", "Unit Tests" ],
+        "tags": [ "Toolbox", "Serilog.ApplicationEnrichment", "Unit Tests", "Logging", "ACPaaS" ],
         "repository": {
             "type": "git",
             "url": ""

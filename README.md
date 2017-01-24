@@ -1,4 +1,4 @@
-# Serilog ApplicationServices Library
+# Serilog ApplicationServices Enrichment Library
 
 Serilog enricher for Digipolis ApplicationServices.
 
@@ -27,7 +27,7 @@ To add it to a project, you add the package to the project.json :
 
 ``` json 
 "dependencies": {
-    "Digipolis.Serilog.ApplicationServices":  "1.2.0",
+    "Digipolis.Serilog.ApplicationServices":  "1.2.1",
  }
 ``` 
 

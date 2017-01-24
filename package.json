@@ -1,6 +1,6 @@
 {
-	"version": "1.0.0",
-	"name": "serilog-applicationenrichment-toolbox",
+	"version": "1.2.1",
+	"name": "digipolis-serilog-applicationenrichment-toolbox",
 	"private": true,
 	"devDependencies": {
 		"gulp": "3.9.0",

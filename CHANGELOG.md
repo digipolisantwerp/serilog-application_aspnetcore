@@ -1,5 +1,9 @@
 # Serilog ApplicationServices Toolbox
 
+## 1.2.1
+
+- consolidation of namespaces.
+
 ## 1.2.0
 
 - alignment with version 1.2.0 of Digipolis.Serilog.

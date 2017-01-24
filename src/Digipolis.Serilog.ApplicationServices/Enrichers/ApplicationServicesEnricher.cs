@@ -4,7 +4,7 @@ using Digipolis.Serilog.ApplicationEnrichment;
 using Serilog.Core;
 using Serilog.Events;
 
-namespace Digipolis.Serilog
+namespace Digipolis.Serilog.Enrichers
 {
     public class ApplicationServicesEnricher : ILogEventEnricher
     {
