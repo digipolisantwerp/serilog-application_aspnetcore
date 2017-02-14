@@ -1,1 +1,1 @@
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Digipolis.Serilog.ApplicationEnrichment.UnitTests")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Digipolis.Serilog.ApplicationServices.UnitTests")]

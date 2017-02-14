@@ -10,28 +10,10 @@ namespace Digipolis.Serilog.ApplicationServices.UnitTests.Enrichers
     public class AddApplicationServicesEnricherExtTests
     {
         [Fact]
-        void ApplicationServicesEnricherIsAdded()
-        {
-            var options = new SerilogExtensionsOptions();
-            options.AddApplicationServicesEnricher();
-            Assert.Collection(options.EnricherTypes, item => Assert.Equal(typeof(ApplicationServicesEnricher), item));
-        }
-
-        [Fact]
-        void ApplicationServicesEnricherIsAddedOnlyOnce()
-        {
-            var options = new SerilogExtensionsOptions();
-            options.AddApplicationServicesEnricher();
-            options.AddApplicationServicesEnricher();
-            Assert.Collection(options.EnricherTypes, item => Assert.Equal(typeof(ApplicationServicesEnricher), item));
-        }
-
-        [Fact]
         void ApplicationServicesEnricherIsRegisteredAsSingleton()
         {
             var services = new ServiceCollection();
             services.AddSerilogExtensions(options => {
-                options.MessageVersion = "1";
                 options.AddApplicationServicesEnricher();
             });
 

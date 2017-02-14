@@ -1,6 +1,6 @@
 ﻿using System;
 using Digipolis.ApplicationServices;
-using Digipolis.Serilog.ApplicationEnrichment;
+using Digipolis.Serilog.ApplicationServices;
 using Serilog.Core;
 using Serilog.Events;
 
@@ -45,18 +45,20 @@ namespace Digipolis.Serilog.Enrichers
                 logEvent.AddOrUpdateProperty(nameProp);
             }
 
-            logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty(ApplicationLoggingProperties.ProcessId, System.Diagnostics.Process.GetCurrentProcess().Id));
-            logEvent.AddOrUpdateProperty(propertyFactory.CreateProperty(ApplicationLoggingProperties.ThreadId, new ScalarValue(System.Environment.CurrentManagedThreadId)));
+            var processIdProp = new LogEventProperty(ApplicationLoggingProperties.ProcessId, new ScalarValue(System.Diagnostics.Process.GetCurrentProcess().Id));
+            var threadIdProp = new LogEventProperty(ApplicationLoggingProperties.ThreadId, new ScalarValue(System.Environment.CurrentManagedThreadId));
+            logEvent.AddOrUpdateProperty(processIdProp);
+            logEvent.AddOrUpdateProperty(threadIdProp);
         }
 
         private void InitProperties(ILogEventPropertyFactory propertyFactory)
         {
-            _applicationId = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationId, _applicationContext.ApplicationId ?? ApplicationLoggingProperties.NullValue);
-            _applicationName = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationName, _applicationContext.ApplicationName ?? ApplicationLoggingProperties.NullValue);
-            _applicationInstanceId = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationInstanceId, _applicationContext.InstanceId ?? ApplicationLoggingProperties.NullValue);
-            _applicationInstanceName = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationInstanceName, _applicationContext.InstanceName ?? ApplicationLoggingProperties.NullValue);
-            _applicationVersion = propertyFactory.CreateProperty(ApplicationLoggingProperties.ApplicationVersion, _applicationContext.ApplicationVersion ?? ApplicationLoggingProperties.NullValue);
-            _machineName = propertyFactory.CreateProperty(ApplicationLoggingProperties.MachineName, System.Environment.MachineName ?? ApplicationLoggingProperties.NullValue);
+            _applicationId = new LogEventProperty(ApplicationLoggingProperties.ApplicationId, new ScalarValue(_applicationContext.ApplicationId ?? ApplicationLoggingProperties.NullValue));
+            _applicationName = new LogEventProperty(ApplicationLoggingProperties.ApplicationName, new ScalarValue(_applicationContext.ApplicationName ?? ApplicationLoggingProperties.NullValue));
+            _applicationInstanceId = new LogEventProperty(ApplicationLoggingProperties.ApplicationInstanceId, new ScalarValue(_applicationContext.InstanceId ?? ApplicationLoggingProperties.NullValue));
+            _applicationInstanceName = new LogEventProperty(ApplicationLoggingProperties.ApplicationInstanceName, new ScalarValue(_applicationContext.InstanceName ?? ApplicationLoggingProperties.NullValue));
+            _applicationVersion = new LogEventProperty(ApplicationLoggingProperties.ApplicationVersion, new ScalarValue(_applicationContext.ApplicationVersion ?? ApplicationLoggingProperties.NullValue));
+            _machineName = new LogEventProperty(ApplicationLoggingProperties.MachineName, new ScalarValue(System.Environment.MachineName ?? ApplicationLoggingProperties.NullValue));
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Linq;
 using Digipolis.Serilog.Enrichers;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog.Core;
 
 namespace Digipolis.Serilog
 {
@@ -8,8 +9,7 @@ namespace Digipolis.Serilog
     {
         public static SerilogExtensionsOptions AddApplicationServicesEnricher(this SerilogExtensionsOptions options)
         {
-            if ( !options.EnricherTypes.Contains(typeof(ApplicationServicesEnricher)) )
-                options.AddEnricher<ApplicationServicesEnricher>();
+            options.ApplicationServices.AddSingleton<ILogEventEnricher, ApplicationServicesEnricher>();
             return options;
         }
     }

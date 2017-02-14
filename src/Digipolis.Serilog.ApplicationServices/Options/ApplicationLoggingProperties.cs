@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Digipolis.Serilog.ApplicationEnrichment
+namespace Digipolis.Serilog.ApplicationServices
 {
     class ApplicationLoggingProperties
     {

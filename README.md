@@ -27,7 +27,7 @@ To add it to a project, you add the package to the project.json :
 
 ``` json 
 "dependencies": {
-    "Digipolis.Serilog.ApplicationServices":  "1.2.1",
+    "Digipolis.Serilog.ApplicationServices":  "2.0.0",
  }
 ``` 
 
@@ -47,7 +47,6 @@ services.AddApplicationServices(options => {
 });
 
 services.AddSerilogExtensions(options => {
-    options.MessageVersion = "1";
     options.AddApplicationServicesEnricher();
 });
 ```  
