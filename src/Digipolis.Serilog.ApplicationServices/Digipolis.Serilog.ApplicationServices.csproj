@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Serilog enricher for Digipolis.ApplicationServices.</Description>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>digipolis.be</Authors>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>Digipolis.Serilog.ApplicationServices</AssemblyName>
+    <PackageId>Digipolis.Serilog.ApplicationServices</PackageId>
+    <PackageTags>Toolbox;Serilog;ApplicationServices;Logging;Digipolis;ACPaaS</PackageTags>
+    <PackageProjectUrl>https://github.com/digipolisantwerp/serilog-applicationservices_aspnetcore</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/digipolisantwerp/serilog-applicationservices_aspnetcore.git/LICENSE.txt</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/digipolisantwerp/serilog-applicationservices_aspnetcore.git</RepositoryUrl>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.Extensions.Logging" Version="1.3.1" />
+    <PackageReference Include="Digipolis.ApplicationServices" Version="1.0.0" />
+    <PackageReference Include="Digipolis.Serilog" Version="2.0.1" />
+    <PackageReference Include="System.Diagnostics.Process" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>
