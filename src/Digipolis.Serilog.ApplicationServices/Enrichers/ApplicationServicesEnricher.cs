@@ -25,6 +25,7 @@ namespace Digipolis.Serilog.Enrichers
 
         private const string COMPONENTKEY = "SourceContext";
 
+        [Obsolete("This package is obsolete")]
         public void Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
         {
             if ( _applicationId == null ) InitProperties(propertyFactory);

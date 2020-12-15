@@ -1,5 +1,7 @@
 # Serilog ApplicationServices Enrichment Library
 
+# -----------Deprecated-----------
+
 Serilog enricher for Digipolis ApplicationServices.
 
 ## Table of Contents

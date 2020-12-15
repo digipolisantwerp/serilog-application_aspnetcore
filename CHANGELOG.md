@@ -1,5 +1,7 @@
 # Serilog ApplicationServices Toolbox
 
+# -----------Deprecated-----------
+
 ## 4.0.0
 
 - Upgrade to .NET Standard 2.0
