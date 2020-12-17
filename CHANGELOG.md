@@ -1,6 +1,7 @@
 # Serilog ApplicationServices Toolbox
 
 # -----------Deprecated-----------
+This toolbox is no longer maintained because application information is automatically added to the logs on OpenShift/Kubernetes and the fields are not required according to the [Digipolis logging guidelines](https://github.com/digipolisantwerpdocumentation/logging-requirements).
 
 ## 4.0.0
 
