@@ -7,6 +7,7 @@ namespace Digipolis.Serilog
 {
     public static class AddApplicationServicesEnricherExt
     {
+        [Obsolete("This package is obsolete")]
         public static SerilogExtensionsOptions AddApplicationServicesEnricher(this SerilogExtensionsOptions options)
         {
             options.ApplicationServices.AddSingleton<ILogEventEnricher, ApplicationServicesEnricher>();
